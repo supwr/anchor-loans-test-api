@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "3c70c1f8-f4a9-4572-8180-de7e2282cc62",
+		"name": "anchor-loans",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullname\": \"Marcelo Rodrigues\",\n\t\"username\": \"marcelo\",\n\t\"password\": \"123456\",\n\t\"role\": \"ADMIN\",\n\t\"email\": \"marasdcelo@capybara.com.br\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/api/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"marcelo\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8001/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTY1ODA2NDMsIm5iZiI6MTU1NjU4MDY0MywianRpIjoiMjcyNGFlODQtNDc3Ny00ZjYwLWE2Y2MtODFhYmU2NjY4Mjg2IiwiaWRlbnRpdHkiOiJtYXJjZWxvIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.48rPks--lr2nSH6E49UCwvZmJTdUX--EsXEkCqXRFCA"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Image",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTEzOTM1NjEsIm5iZiI6MTU1MTM5MzU2MSwianRpIjoiMWRkYWViMjItYTI1ZS00ODBhLWEyMjctMWVhYTk3YzI3YzhjIiwiaWRlbnRpdHkiOiJhZG1pbiIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyJ9.r9AiHtIQInWpZKafBp9aNWtl-58LaJdzEaPPvPj-g4Y"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery/5cc4c43c0f051713f6af5ab8",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery",
+						"5cc4c43c0f051713f6af5ab8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Image",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTY1ODEyOTIsIm5iZiI6MTU1NjU4MTI5MiwianRpIjoiNGE0MmVkMDItYTRiMi00ZDlkLTkwZDUtN2NiMmJjOWM1ZmMwIiwiaWRlbnRpdHkiOiJtYXJjZWxvIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.y8Y43lNkUvfL_--_z5rUew_fYZPKa521l2E3_TQcJdk"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery/5cc78e380fa40bf2ea68c73c/approve",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery",
+						"5cc78e380fa40bf2ea68c73c",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Disapprove Image",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTYzODA2OTUsIm5iZiI6MTU1NjM4MDY5NSwianRpIjoiZDJjZDA0MGMtYjRhNS00M2ZhLWI0NDAtNmQ5ODVhNDhkZGNlIiwiaWRlbnRpdHkiOiJtYXJjZWxvIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.dEzIQsAKGqutvXrJNA5t4WeWRdo2TY277L5nwyrN9HM"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery/5cc4844f90566500089010a9/disapprove",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery",
+						"5cc4844f90566500089010a9",
+						"disapprove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Like Image",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTY1ODA2NDMsIm5iZiI6MTU1NjU4MDY0MywianRpIjoiMjcyNGFlODQtNDc3Ny00ZjYwLWE2Y2MtODFhYmU2NjY4Mjg2IiwiaWRlbnRpdHkiOiJtYXJjZWxvIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.48rPks--lr2nSH6E49UCwvZmJTdUX--EsXEkCqXRFCA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery/5cc78da3f888749bc31c4e45/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery",
+						"5cc78da3f888749bc31c4e45",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get images",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTY3NjAwODIsIm5iZiI6MTU1Njc2MDA4MiwianRpIjoiYjlmYzY0MzgtMjc3ZS00ZTZhLTk3MTktZGIxZDNmM2YwZTMzIiwiaWRlbnRpdHkiOiJtYXJjZWxvIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.cJm7ds77V3PQimrULomO1xMzt8BP0hxuARRlNmUrLxI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8001/api/gallery",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"gallery"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
