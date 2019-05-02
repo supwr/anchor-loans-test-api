@@ -1,0 +1,8 @@
+flask
+pymongo
+flask-cors
+flask-jwt-extended
+boto3
+Pillow
+passlib
+Flask-PyMongo

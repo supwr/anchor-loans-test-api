@@ -1,0 +1,6 @@
+*.pyc
+*.log
+.idea
+*.log
+*.pid
+public
